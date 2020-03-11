@@ -16,6 +16,11 @@ const RootDrawerNavigator = createDrawerNavigator({
   About: {
     screen: AboutStack,
   },
+ 
+},
+{
+drawerWidth: 300,
+    drawerPosition: 'right'
 });
 
 export default createAppContainer(RootDrawerNavigator);
