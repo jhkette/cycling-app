@@ -1,29 +1,11 @@
 import React from "react";
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
-import Home from './src/screens/Home';
-import Results from './src/screens/Details';
+import Navigator from './src/routes/drawer';
 
-const navigator = createStackNavigator(
-  {
-    Home: {
-      screen: Home,
-      navigationOptions: {
-        title: 'Cycling guide',
-      }
-    },
-    Results: {
-      screen: Results,
-      navigationOptions: {
-        title: 'Cycling Details',
-      }
-    },
-  },
-  {
-    initialRouteName: 'Home',
-    defaultNavigationOptions: {
-      title: 'Cycling search'
-    }
-  }
-);
-export default createAppContainer(navigator);
+
+export default function App() { 
+  return (
+      <Navigator />
+    )
+  } 
